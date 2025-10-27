@@ -1,0 +1,87 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.word-display {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.key {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.key:hover {
+  background-color: #0056b3;
+}
+
+.key.used {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.estado {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.estado.ganado {
+  color: green;
+}
+
+.estado.perdido {
+  color: red;
+}
+
+.reiniciar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reiniciar:hover {
+  background-color: #033974;
+}
