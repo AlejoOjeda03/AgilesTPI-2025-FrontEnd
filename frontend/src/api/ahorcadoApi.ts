@@ -3,7 +3,7 @@ import axios from "axios";
 import { EstadoJuego } from "../types";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: "https://ahorcado-agiles-u1qj.onrender.com",
 });
 
 export const nuevaPartida = async (
