@@ -47,16 +47,24 @@ const App: React.FC = () => {
         onClick={handleLetra}
       />
 
-      {mostrarEstado && (
-        <>
-          <p className={`estado ${estado.estado || ""}`}>
-            Estado: {estado.estado?.toUpperCase()}
+    {mostrarEstado && (
+      <>
+        <p className={`estado ${estado.estado || ""}`}>
+          Estado: {estado.estado?.toUpperCase()}
+        </p>
+
+        {estado.estado === "perdiste" && estado.palabra && (
+          <p className="palabra-revelada">
+            La palabra era: <strong>{estado.palabra.toUpperCase()}</strong>
           </p>
-          <button className="reiniciar" onClick={handleReiniciar}>
-            Volver a Jugar
-          </button>
-        </>
-      )}
+        )}
+
+        <button className="reiniciar" onClick={handleReiniciar}>
+          Volver a Jugar
+        </button>
+      </>
+    )}
+
     </div>
   );
 };
