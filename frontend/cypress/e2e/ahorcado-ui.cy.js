@@ -1,6 +1,6 @@
 describe("Juego del Ahorcado - ATDD", () => {
-  const BACKEND = "http://127.0.0.1:8000";
-  const FRONT = "http://localhost:3000";
+  const BACKEND = "https://ahorcado-agiles-u1qj.onrender.com";
+  const FRONT = "https://agiles-tpi-2025-front-end.vercel.app";
   const ALFABETO = "abcdefghijklmnopqrstuvwxyz".split("");
 
   beforeEach(() => {

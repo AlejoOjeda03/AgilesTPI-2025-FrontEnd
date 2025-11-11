@@ -1,0 +1,39 @@
+name: Run Acceptance Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧩 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Install frontend dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: 🚀 Start backend (Render API)
+        run: |
+          echo "Backend URL: https://ahorcado-agiles-u1qj.onrender.com"
+
+      - name: 🌐 Run Cypress tests (Headless)
+        working-directory: ./frontend
+        run: npx cypress run --browser chrome
+
+      - name: 📸 Upload Cypress screenshots (if failed)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: frontend/cypress/screenshots

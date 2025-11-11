@@ -2,8 +2,9 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    baseUrl: "https://ahorcado-agiles-frontend.vercel.app",
+    env: {
+      BACKEND_URL: "https://ahorcado-agiles-u1qj.onrender.com", 
     },
   },
 });
