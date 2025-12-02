@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Juego Ahorcado</h1>
+      <h1 className="title">El Juego Del Ahorcado</h1>
 
       <HangmanDrawing errores={errores} />
 

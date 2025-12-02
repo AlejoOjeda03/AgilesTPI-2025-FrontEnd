@@ -34,7 +34,7 @@ describe("Juego del Ahorcado - ATDD", () => {
       .then((pal) => {
         expect(pal, "debug palabra devuelta").to.be.a("string").and.not.be.empty;
         cy.wrap(pal).as("palabra");
-        cy.log(`🔤 Palabra actual del backend: ${pal}`);
+        cy.log(`Palabra actual del backend: ${pal}`);
       });
   });
 
